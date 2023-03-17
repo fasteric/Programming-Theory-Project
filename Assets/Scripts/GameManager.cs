@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    // ENCAPSULATION
     public static float deltaTime => 1f / targetFrameRate; // single source of truth delta time
     public static float targetFrameRateFloat => targetFrameRate; // float version of targetFrameRate
     public static int targetFrameRate => Application.targetFrameRate; // single source of truth target frame rate
