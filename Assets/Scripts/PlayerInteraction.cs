@@ -13,6 +13,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            // ABSTRACTION
             Interact();
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+// INHERITANCE
 public class InteractionReset : Interactable
 {
     private struct PositionAndRotation { public Vector3 position; public Quaternion rotation; }
@@ -15,10 +16,12 @@ public class InteractionReset : Interactable
     private int interactTimeoutFrames = 0;
     private Color meshRendererMaterialDefaultColor = Color.gray;
 
+    // POLYMORPHISM
     public override void Interact(PlayerInteraction playerInteraction)
     {
         if (interactTimeoutFrames > 0) return;
         interactTimeoutFrames = interactTimeoutFramesMax;
+        // ABSTRACTION
         ResetAllInteractablePositions();
         // set color
         transform.root.GetComponentInChildren<MeshRenderer>().material.color = Color.red;

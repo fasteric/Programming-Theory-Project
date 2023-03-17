@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class InteractionOrbit : Interactable
 {
     [SerializeField] private float orbitAngularVelocity = 360;
@@ -19,6 +20,7 @@ public class InteractionOrbit : Interactable
     private int orbitFramesRemaining = 0;
     private Transform orbitTargetTransform = null;
 
+    // POLYMORPHISM
     public override void Interact(PlayerInteraction playerInteraction)
     {
         if (isOrbiting) return;
@@ -39,6 +41,7 @@ public class InteractionOrbit : Interactable
 
     private void Update()
     {
+        // ABSTRACTION
         if (isOrbiting) Orbit();
     }
 
